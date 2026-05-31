@@ -123,15 +123,15 @@ export default function SwingTraderClub() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(245,158,11,0.08)_0%,_transparent_60%)]" />
           </div>
           <div className="max-w-7xl mx-auto px-6 pt-20 pb-24 w-full">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
               <p data-anim data-delay="0ms" className="text-amber-400 uppercase tracking-[0.4em] text-xs font-bold mb-6">Swing Trading · Educación · Comunidad</p>
               <h1 data-anim data-delay="100ms" className="font-black leading-none tracking-tight uppercase" style={{ fontSize:"clamp(2.8rem, 8vw, 7rem)" }}>
                 Opera con<br /><span className="text-zinc-600">sistema.</span><br /><span className="text-amber-400">No con suerte.</span>
               </h1>
-              <p data-anim data-delay="200ms" className="mt-8 text-zinc-400 text-lg max-w-2xl leading-relaxed">
+              <p data-anim data-delay="200ms" className="mt-8 text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
                 Un club donde aprendes a operar acciones USA con análisis técnico, gestión de riesgo y metodología de swing trading a mediano plazo. Sin señales. Sin copy trading. Solo el sistema — para que tú decidas.
               </p>
-              <div data-anim data-delay="300ms" className="flex flex-wrap gap-4 mt-12">
+              <div data-anim data-delay="300ms" className="flex flex-wrap justify-center gap-4 mt-12">
                 <a href="#contacto" className="bg-amber-500 hover:bg-amber-400 transition text-black px-8 py-4 rounded-full font-bold text-sm">Quiero entrar al club</a>
                 <a href="#sistema" className="border border-white/15 hover:border-white/40 text-zinc-300 hover:text-white transition px-8 py-4 rounded-full font-bold text-sm">Ver el sistema</a>
               </div>
@@ -147,14 +147,14 @@ export default function SwingTraderClub() {
         {/* ACTIVIDAD */}
         <section id="actividad" className="border-t border-white/5 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-6 py-28">
-            <div data-anim className="mb-16">
+            <div data-anim className="mb-16 text-center">
               <p className="text-amber-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">Qué pasa dentro del club</p>
               <h2 className="text-4xl lg:text-6xl font-black uppercase">Activo.<br /><span className="text-zinc-600">Cada semana.</span></h2>
-              <p className="mt-4 text-zinc-500 text-sm max-w-lg">No es un curso que se compra y se olvida. El club tiene actividad continua: revisión de mercado, análisis de setups, clases en vivo y comunidad activa.</p>
+              <p className="mt-4 text-zinc-500 text-sm max-w-lg mx-auto">No es un curso que se compra y se olvida. El club tiene actividad continua: revisión de mercado, análisis de setups, clases en vivo y comunidad activa.</p>
             </div>
-            <div className="grid lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {weeklyItems.map(({ Icon, label, title, desc }, i) => (
-                <div key={title} data-anim data-delay={`${i * 80}ms`} className="bg-[#09090b] border border-zinc-800/50 rounded-3xl p-7 hover:border-amber-500/30 transition-all duration-500">
+                <div key={title} data-anim data-delay={`${i * 80}ms`} className="bg-[#09090b] border border-zinc-800/50 rounded-3xl p-7 hover:border-amber-500/30 transition-all duration-500 flex flex-col items-center text-center">
                   <span className="text-amber-400/50 text-xs font-bold uppercase tracking-widest">{label}</span>
                   <div className="w-9 h-9 rounded-xl bg-amber-500/10 flex items-center justify-center my-4"><Icon size={18} className="text-amber-400" /></div>
                   <h3 className="font-bold text-sm mb-2">{title}</h3>
@@ -168,14 +168,14 @@ export default function SwingTraderClub() {
         {/* SISTEMA */}
         <section id="sistema" className="border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6 py-28">
-            <div data-anim className="mb-16">
+            <div data-anim className="mb-16 text-center">
               <p className="text-amber-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">La metodología</p>
               <h2 className="text-4xl lg:text-6xl font-black uppercase">6 pasos.<br /><span className="text-zinc-600">Primero el capital.</span></h2>
             </div>
-            <div className="grid lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {system.map(({ num, Icon, title, desc }, i) => (
-                <div key={title} data-anim data-delay={`${i * 80}ms`} className="group bg-zinc-950 border border-zinc-800/50 rounded-3xl p-7 hover:border-amber-500/30 transition-all duration-500">
-                  <div className="flex items-center gap-3 mb-5">
+                <div key={title} data-anim data-delay={`${i * 80}ms`} className="group bg-zinc-950 border border-zinc-800/50 rounded-3xl p-7 hover:border-amber-500/30 transition-all duration-500 flex flex-col items-center text-center">
+                  <div className="flex items-center justify-center gap-3 mb-5">
                     <span className="text-amber-400/30 font-black text-2xl font-mono">{num}</span>
                     <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center"><Icon size={16} className="text-amber-400" /></div>
                   </div>
@@ -190,18 +190,18 @@ export default function SwingTraderClub() {
         {/* QUÉ INCLUYE */}
         <section className="border-t border-white/5 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-6 py-28">
-            <div data-anim className="mb-16">
+            <div data-anim className="mb-16 text-center">
               <p className="text-amber-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">Qué incluye</p>
               <h2 className="text-4xl lg:text-5xl font-black uppercase">Todo lo que necesitas<br /><span className="text-zinc-600">para operar con sistema.</span></h2>
             </div>
-            <div className="grid lg:grid-cols-2 gap-5 max-w-4xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
               {[
                 { Icon:BookOpen,   title:"6 módulos de formación",      desc:"Desde educación financiera base hasta el sistema completo de swing trading. Acceso permanente mientras seas miembro." },
                 { Icon:Zap,       title:"Herramienta de gestión",       desc:"Sistema con las reglas del método: evalúa cada activo, calcula tamaño de posición, define stop loss y planifica la salida." },
                 { Icon:BarChart2, title:"Revisión semanal de mercado",  desc:"Cada semana: estado del mercado (alcista, corrección o bajista) y qué acciones tienen estructura técnica válida." },
                 { Icon:Users,     title:"Comunidad activa",              desc:"Grupo privado, Q&A semanal, webinar mensual y seguimiento de tu proceso de aprendizaje." },
               ].map(({ Icon, title, desc }, i) => (
-                <div key={title} data-anim data-delay={`${i * 80}ms`} className="flex gap-5 bg-[#09090b] border border-zinc-800/50 rounded-3xl p-7 hover:border-amber-500/20 transition-all">
+                <div key={title} data-anim data-delay={`${i * 80}ms`} className="flex flex-col items-center text-center gap-4 bg-[#09090b] border border-zinc-800/50 rounded-3xl p-7 hover:border-amber-500/20 transition-all">
                   <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/15 flex items-center justify-center flex-shrink-0"><Icon size={18} className="text-amber-400" /></div>
                   <div><h3 className="font-bold text-sm mb-2">{title}</h3><p className="text-zinc-500 text-xs leading-relaxed">{desc}</p></div>
                 </div>
@@ -209,7 +209,7 @@ export default function SwingTraderClub() {
             </div>
 
             {/* Precio */}
-            <div data-anim className="mt-16 max-w-md">
+            <div data-anim className="mt-16 max-w-md mx-auto">
               <div className="bg-[#09090b] border border-amber-500/25 rounded-3xl p-8">
                 <p className="text-zinc-500 text-xs uppercase tracking-widest mb-2">Acceso mensual</p>
                 <div className="flex items-baseline gap-2 mb-1">
@@ -226,14 +226,14 @@ export default function SwingTraderClub() {
         {/* MÓDULOS */}
         <section id="modulos" className="border-t border-white/5">
           <div className="max-w-5xl mx-auto px-6 py-28">
-            <div data-anim className="mb-16">
+            <div data-anim className="mb-16 text-center">
               <p className="text-amber-400 uppercase tracking-[0.35em] text-xs font-bold mb-4">El programa</p>
               <h2 className="text-4xl lg:text-6xl font-black uppercase">6 módulos.<br /><span className="text-zinc-600">De cero al sistema.</span></h2>
             </div>
             <div className="space-y-3">
               {modules.map((mod, i) => (
                 <div key={mod.num} data-anim data-delay={`${i * 60}ms`} className="border border-zinc-800/60 rounded-2xl overflow-hidden">
-                  <button onClick={() => setOpenModule(openModule === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left hover:bg-white/2 transition">
+                  <button onClick={() => setOpenModule(openModule === i ? null : i)} className="w-full flex items-center justify-center gap-4 p-6 text-center hover:bg-white/2 transition">
                     <div className="flex items-center gap-5">
                       <span className="text-amber-400/40 font-black text-xl font-mono w-10">{mod.num}</span>
                       <div className="flex items-center gap-3"><mod.Icon size={16} className="text-amber-400 flex-shrink-0" /><span className="font-bold text-sm">{mod.title}</span></div>
@@ -241,10 +241,10 @@ export default function SwingTraderClub() {
                     <ChevronDown size={16} className={`text-amber-400 flex-shrink-0 transition-transform duration-300 ${openModule === i ? "rotate-180" : ""}`} />
                   </button>
                   {openModule === i && (
-                    <div className="px-6 pb-6 pl-[4.5rem]">
+                    <div className="px-6 pb-6 text-center">
                       <ul className="space-y-2">
                         {mod.items.map(item => (
-                          <li key={item} className="flex items-start gap-3 text-zinc-400 text-sm"><CheckCircle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />{item}</li>
+                          <li key={item} className="flex items-start justify-center gap-3 text-zinc-400 text-sm"><CheckCircle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />{item}</li>
                         ))}
                       </ul>
                     </div>
@@ -259,7 +259,7 @@ export default function SwingTraderClub() {
         <section className="border-t border-white/5 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-6 py-28">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div>
+              <div className="text-center">
                 <p data-anim className="text-amber-400 uppercase tracking-[0.35em] text-xs font-bold mb-5">Quién enseña</p>
                 <h2 data-anim data-delay="100ms" className="text-4xl lg:text-5xl font-black uppercase leading-tight">Roberto<br /><span className="text-zinc-600">Santander.</span></h2>
                 <div data-anim data-delay="200ms" className="mt-8 space-y-4 text-zinc-400 text-[15px] leading-relaxed">
@@ -268,18 +268,18 @@ export default function SwingTraderClub() {
                 </div>
               </div>
               <div data-anim data-delay="150ms">
-                <div className="bg-amber-500/5 border border-amber-500/15 rounded-3xl p-8">
+                <div className="bg-amber-500/5 border border-amber-500/15 rounded-3xl p-8 flex flex-col items-center text-center">
                   <AlertTriangle size={20} className="text-amber-400 mb-5" />
                   <p className="text-amber-200/80 text-sm font-semibold mb-3">Lo que esto NO es:</p>
                   <ul className="space-y-2 mb-6">
                     {["No es señales ni copy trading","No entregamos recomendaciones de inversión","No prometemos rentabilidades ni resultados","No somos asesores financieros"].map(item => (
-                      <li key={item} className="flex items-center gap-3 text-zinc-400 text-sm"><span className="w-1.5 h-1.5 rounded-full bg-amber-400/40 flex-shrink-0" />{item}</li>
+                      <li key={item} className="flex items-center justify-center gap-3 text-zinc-400 text-sm"><span className="w-1.5 h-1.5 rounded-full bg-amber-400/40 flex-shrink-0" />{item}</li>
                     ))}
                   </ul>
                   <p className="text-amber-200/80 text-sm font-semibold mb-3">Lo que SÍ es:</p>
                   <ul className="space-y-2">
                     {["Educación financiera aplicada al swing trading","Sistema claro con reglas y metodología","Comunidad activa de traders en formación","Herramientas para que tú tomes tus decisiones"].map(item => (
-                      <li key={item} className="flex items-center gap-3 text-zinc-300 text-sm"><CheckCircle size={13} className="text-amber-400 flex-shrink-0" />{item}</li>
+                      <li key={item} className="flex items-center justify-center gap-3 text-zinc-300 text-sm"><CheckCircle size={13} className="text-amber-400 flex-shrink-0" />{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -298,11 +298,11 @@ export default function SwingTraderClub() {
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} data-anim data-delay={`${i * 60}ms`} className="border border-zinc-800/60 rounded-2xl overflow-hidden">
-                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left hover:bg-white/2 transition">
+                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-center gap-4 p-6 text-center hover:bg-white/2 transition">
                     <span className="font-semibold text-sm pr-4">{faq.q}</span>
                     <ChevronDown size={16} className={`text-amber-400 flex-shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} />
                   </button>
-                  {openFaq === i && <div className="px-6 pb-6 text-zinc-500 text-sm leading-relaxed">{faq.a}</div>}
+                  {openFaq === i && <div className="px-6 pb-6 text-zinc-500 text-sm leading-relaxed text-center">{faq.a}</div>}
                 </div>
               ))}
             </div>
@@ -312,33 +312,33 @@ export default function SwingTraderClub() {
         {/* CONTACTO */}
         <section id="contacto" className="border-t border-white/5 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-6 py-28">
-            <div className="grid lg:grid-cols-2 gap-20 items-start">
-              <div>
+            <div className="max-w-lg mx-auto">
+              <div className="text-center">
                 <p data-anim className="text-amber-400 uppercase tracking-[0.35em] text-xs font-bold mb-5">Entrar al club</p>
                 <h2 data-anim data-delay="100ms" className="text-4xl lg:text-5xl font-black uppercase leading-tight">Agenda tu<br /><span className="text-zinc-600">primera reunión.</span></h2>
-                <p data-anim data-delay="200ms" className="mt-6 text-zinc-500 text-[15px] leading-relaxed max-w-sm">Cuéntame en qué etapa estás y qué quieres aprender. Te explico cómo funciona el club.</p>
+                <p data-anim data-delay="200ms" className="mt-6 text-zinc-500 text-[15px] leading-relaxed max-w-sm mx-auto">Cuéntame en qué etapa estás y qué quieres aprender. Te explico cómo funciona el club.</p>
                 <div data-anim data-delay="300ms" className="mt-10 space-y-3 text-zinc-500 text-sm">
-                  <div className="flex items-center gap-3"><Mail size={15} className="text-amber-400" /><span>rsantanderh@gmail.com</span></div>
-                  <div className="flex items-center gap-3"><MapPin size={15} className="text-amber-400" /><span>Santiago, Chile — club online</span></div>
+                  <div className="flex items-center justify-center gap-3"><Mail size={15} className="text-amber-400" /><span>rsantanderh@gmail.com</span></div>
+                  <div className="flex items-center justify-center gap-3"><MapPin size={15} className="text-amber-400" /><span>Santiago, Chile — club online</span></div>
                 </div>
               </div>
-              <div data-anim data-delay="150ms" className="space-y-4">
+              <div data-anim data-delay="150ms" className="space-y-4 mt-12">
                 <div className="grid grid-cols-2 gap-4">
                   {[{l:"Nombre",k:"name",t:"text",p:"Tu nombre"},{l:"Email",k:"email",t:"email",p:"tu@email.com"}].map(({l,k,t,p}) => (
                     <div key={k}>
-                      <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2">{l}</label>
+                      <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">{l}</label>
                       <input type={t} value={form[k as keyof typeof form]} onChange={e => setForm({...form,[k]:e.target.value})} placeholder={p}
                         className="w-full bg-[#09090b] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-amber-500 focus:outline-none transition" />
                     </div>
                   ))}
                 </div>
                 <div>
-                  <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2">Teléfono <span className="normal-case text-zinc-700">(opcional)</span></label>
+                  <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">Teléfono <span className="normal-case text-zinc-700">(opcional)</span></label>
                   <input type="tel" value={form.phone} onChange={e => setForm({...form,phone:e.target.value})} placeholder="+56 9 XXXX XXXX"
                     className="w-full bg-[#09090b] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-amber-500 focus:outline-none transition" />
                 </div>
                 <div>
-                  <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2">¿Tienes experiencia invirtiendo?</label>
+                  <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">¿Tienes experiencia invirtiendo?</label>
                   <select value={form.level} onChange={e => setForm({...form,level:e.target.value})}
                     className="w-full bg-[#09090b] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm focus:border-amber-500 focus:outline-none transition appearance-none">
                     <option value="">Selecciona tu situación</option>
@@ -347,7 +347,7 @@ export default function SwingTraderClub() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2">¿Qué quieres lograr?</label>
+                  <label className="text-zinc-500 text-xs uppercase tracking-widest block mb-2 text-center">¿Qué quieres lograr?</label>
                   <textarea rows={3} value={form.goal} onChange={e => setForm({...form,goal:e.target.value})} placeholder="Ej: Aprender a operar desde cero, mejorar mi gestión de riesgo..."
                     className="w-full bg-[#09090b] border border-zinc-800 rounded-2xl px-5 py-4 text-white text-sm placeholder-zinc-700 focus:border-amber-500 focus:outline-none transition resize-none" />
                 </div>
@@ -363,18 +363,18 @@ export default function SwingTraderClub() {
         {/* FOOTER */}
         <footer className="border-t border-white/5 bg-[#09090b]">
           <div className="max-w-7xl mx-auto px-6 py-10">
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 pb-8 mb-8 border-b border-white/5">
+            <div className="flex flex-col items-center text-center gap-6 pb-8 mb-8 border-b border-white/5">
               <div>
                 <p className="font-black text-xl">Swing<span className="text-amber-400">Trader</span>Club</p>
                 <p className="text-zinc-600 text-xs mt-1">Por Roberto Santander Hoffmann · CANOPIA</p>
               </div>
-              <nav className="flex flex-wrap gap-6 text-zinc-600 text-sm">
-                {[["Chile Financiero (gratis)","#"],["canopia.cl","https://canopia.cl"],["Instagram","https://instagram.com/rsantanderh"]].map(([l,h]) => (
+              <nav className="flex flex-wrap justify-center gap-6 text-zinc-600 text-sm">
+                {[["Chile Financiero (gratis)","https://chilefinanciero.canopia.cl"],["canopia.cl","https://canopia.cl"],["Instagram","https://instagram.com/rsantanderh"]].map(([l,h]) => (
                   <a key={l} href={h} target={h.startsWith("http")?"_blank":undefined} rel={h.startsWith("http")?"noopener noreferrer":undefined} className="hover:text-white transition">{l}</a>
                 ))}
               </nav>
             </div>
-            <div className="flex flex-col lg:flex-row justify-between gap-3 text-zinc-700 text-xs">
+            <div className="flex flex-col items-center text-center gap-3 text-zinc-700 text-xs">
               <p>Swing Trader Club es educación financiera. No entrega recomendaciones de inversión. Invertir conlleva riesgo de pérdida de capital.</p>
               <DisclaimerLink label="Aviso legal y sobre Roberto →" />
             </div>
