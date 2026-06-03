@@ -85,6 +85,19 @@ export default function SwingTraderClub() {
     <>
       <div className="min-h-screen bg-[#09090b] text-[#e4e4e7] antialiased overflow-x-hidden">
 
+        {/* BARRA ECOSISTEMA CANOPIA */}
+        <div className="bg-[#09090b] border-b border-white/5 text-[11px]">
+          <div className="max-w-7xl mx-auto px-6 h-[30px] flex items-center justify-center gap-3">
+            <span className="text-zinc-500 font-semibold tracking-wide hidden sm:inline">Ecosistema CANOPIA</span>
+            <span className="text-white/10 hidden sm:inline">·</span>
+            <a href="https://canopia.cl" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition">canopia.cl</a>
+            <span className="text-white/10">·</span>
+            <a href="https://chilefinanciero.canopia.cl" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-sky-400 transition">Chile Financiero</a>
+            <span className="text-white/10">·</span>
+            <span className="text-amber-400 font-semibold">Swing Trader Club</span>
+          </div>
+        </div>
+
         {/* DISCLAIMER */}
         <div className="bg-amber-500/8 border-b border-amber-500/15 px-6 py-2.5 text-center text-xs text-amber-700/80 leading-relaxed">
           <strong className="text-amber-500">Aviso:</strong> Swing Trader Club es educación financiera. No entregamos recomendaciones de inversión. Invertir conlleva riesgo de pérdida.
