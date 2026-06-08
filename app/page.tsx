@@ -7,8 +7,23 @@ import {
   Target, Activity, Users, Calendar, Zap,
 } from "lucide-react";
 import { DisclaimerLink } from "./components/DisclaimerModal";
+import ContenidoSocial, { type VideoItem, type IgItem } from "./components/ContenidoSocial";
 
 const WHATSAPP = "56997412604";
+
+/* ============================================================
+   CONTENIDO SOCIAL — Swing Trader Club (trading)
+   Pega aquí la URL cruda; el ID se extrae solo.
+   Para AGREGAR: añade una línea más al array. Para QUITAR: bórrala.
+   ============================================================ */
+const VIDEOS_STC: VideoItem[] = [
+  { url: "https://www.youtube.com/watch?v=mD2gk4GUpd0", title: "Cómo usar FINVIZ en 2026 — screening de acciones", tag: "Herramientas" },
+  { url: "https://www.youtube.com/watch?v=c28vFeeVCrk", title: "Tutorial completo Interactive Brokers — paso a paso", tag: "Broker" },
+];
+const INSTAGRAM_STC: IgItem[] = [
+  // { url: "https://www.instagram.com/reel/XXXXXXXXX/" },
+  // { url: "https://www.instagram.com/p/XXXXXXXXX/" },
+];
 
 const weeklyItems = [
   { Icon: BarChart2, label: "Lunes",    title: "Estado del mercado", desc: "Revisión semanal: ¿alcista, corrección o bajista? Define la exposición permitida para la semana." },
@@ -79,7 +94,7 @@ export default function SwingTraderClub() {
     window.open(`mailto:rsantanderh@gmail.com?subject=${s}&body=${b}`);
   };
 
-  const navLinks: [string, string][] = [["El sistema","#sistema"],["Actividad","#actividad"],["Módulos","#modulos"],["Entrar","#contacto"]];
+  const navLinks: [string, string][] = [["El sistema","#sistema"],["Actividad","#actividad"],["Contenido","#contenido"],["Módulos","#modulos"],["Entrar","#contacto"]];
 
   return (
     <>
@@ -111,7 +126,7 @@ export default function SwingTraderClub() {
               {navLinks.map(([label, href]) => (
                 <a key={href} href={href} className="text-sm text-zinc-400 hover:text-white transition font-medium">{label}</a>
               ))}
-              <a href="/login" className="text-sm border border-zinc-700 hover:border-amber-500/50 text-zinc-400 hover:text-amber-400 transition px-4 py-2 rounded-full font-mono text-xs">MIS CLASES</a>
+              <a href="https://canopia.cl/portal" className="text-sm border border-zinc-700 hover:border-amber-500/50 text-zinc-400 hover:text-amber-400 transition px-4 py-2 rounded-full font-mono text-xs">ÁREA DE MIEMBROS</a>
               <a href="#contacto" className="text-sm bg-amber-500 hover:bg-amber-400 transition text-black px-5 py-2.5 rounded-full font-bold">Quiero entrar</a>
             </nav>
             <button onClick={() => setMobileMenu(!mobileMenu)} aria-label="Menú" className="lg:hidden flex flex-col gap-1.5 p-1">
@@ -177,6 +192,17 @@ export default function SwingTraderClub() {
             </div>
           </div>
         </section>
+
+        {/* CONTENIDO SOCIAL */}
+        <ContenidoSocial
+          accent="amber"
+          eyebrow="Mira el sistema en acción"
+          title={<>En video.<br /><span className="text-zinc-600">Y en Instagram.</span></>}
+          subtitle="Análisis de mercado, setups y educación de trading. Dale play y míralo aquí mismo, sin salir de la página."
+          videos={VIDEOS_STC}
+          instagram={INSTAGRAM_STC}
+          instagramProfile="https://instagram.com/rsantanderh"
+        />
 
         {/* SISTEMA */}
         <section id="sistema" className="border-t border-white/5">
